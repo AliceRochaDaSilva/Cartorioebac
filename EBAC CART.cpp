@@ -56,12 +56,12 @@ int registro() //Função responsavel por cadastrar usuários no sistema
 	fprintf(file,cargo);  // salvo o valor da variavel
 	fclose(file); //fecha o arquivo
 		
-	system("pause");	
+	system("pause");
+		
 }
 
 int consulta()
 {
-	
 	setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem
 	
 	char cpf[40];
@@ -87,6 +87,7 @@ int consulta()
 	
 	system("pause");
 	
+	
  }
 
 int deletar()
@@ -106,16 +107,19 @@ int deletar()
 		printf("O usuário não se encontra no sistema!.\n");
 		system("pause");
 	}
+	
 }
 
 
+
 int main()
-{
+    {
 	int opcao=0; //Definindo variáveis
 	int laco=1;
 		
 	for(laco=1;laco=1;)
 	{
+		
 		system("cls");
 
 	    setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem
@@ -125,6 +129,7 @@ int main()
     	printf("\t1 - Resgistrar nomes\n");
     	printf("\t2 - Consultar nomes\n");
     	printf("\t3 - Deletar nomes\n\n");
+    	printf("\t4 - Sair do sistema\n\n");
     	printf("Opção:"); //Fim do menu
 	
     	scanf("%d", &opcao);
@@ -144,6 +149,11 @@ int main()
 			case 3:
 			deletar(); //chamada de funções
     		break;
+    		
+    		case 4:
+    		printf("Obrigado por utilizar nosso sistema!\n");
+			return 0;
+			break;	
     		
     		default:
     		printf("Você escolheu deletar nomes!\n");
